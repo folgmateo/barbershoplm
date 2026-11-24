@@ -2,8 +2,8 @@
 (() => {
   "use strict";
 
-  // CAMBIA ESTE NÚMERO por el WhatsApp real de la barbería (código de país, sin "+" ni espacios)
-  const WHATSAPP_NUMBER = "50200000000";
+  // WhatsApp de la barbería: +502 5487 0255 (código de país, sin "+" ni espacios)
+  const WHATSAPP_NUMBER = "50254870255";
 
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
