@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="t">
+  <title id="t">BarberShopLM</title>
+  <!-- Logo original BarberShopLM: anillo doble + navaja diagonal + monograma LM -->
+  <circle cx="60" cy="60" r="56" fill="#000" stroke="#C9A45C" stroke-width="2"/>
+  <circle cx="60" cy="60" r="49" fill="none" stroke="#C9A45C" stroke-width="0.75"/>
+  <!-- Navaja: hoja y mango -->
+  <path d="M30 88 L62 56 L70 60 L40 92 Z" fill="#F4F1EA"/>
+  <path d="M62 56 L88 30 Q93 27 92 33 L70 60 Z" fill="#C9A45C"/>
+  <circle cx="66" cy="58" r="2.2" fill="#000"/>
+  <!-- Monograma -->
+  <text x="60" y="44" text-anchor="middle" font-family="'Bodoni Moda', Didot, 'Bodoni 72', Georgia, serif" font-size="22" font-weight="600" fill="#F4F1EA" letter-spacing="1">LM</text>
+  <text x="60" y="104" text-anchor="middle" font-family="'Archivo', Arial, sans-serif" font-size="6.5" fill="#C9A45C" letter-spacing="2.4">EST. 2026</text>
+</svg>

@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BarberShopLM · Barbería clásica</title>
+  <meta name="description" content="BarberShopLM: cortes, barba, afeitado clásico a navaja y tratamientos. Reserva tu cita online o por WhatsApp.">
+  <meta name="theme-color" content="#000000">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="importmap">
+    { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js", "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/" } }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+  <div class="progress" aria-hidden="true"><span></span></div>
+
+  <header class="nav" id="nav">
+    <a class="nav__brand" href="#inicio" aria-label="BarberShopLM, inicio">
+      <img src="assets/logo.svg" alt="" width="40" height="40">
+      <span>BarberShopLM</span>
+    </a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="menu">
+      <span class="sr-only">Abrir menú</span><i></i><i></i>
+    </button>
+    <nav id="menu" class="nav__menu" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#galeria">Galería</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#precios">Precios</a>
+      <a href="#visitanos">Visítanos</a>
+      <a href="#reservar" class="btn btn--gold magnetic">Reservar cita</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- 1. HERO -->
+    <section class="hero" id="inicio">
+      <canvas class="hero__canvas" id="scene" aria-hidden="true"></canvas>
+      <div class="hero__content">
+        <svg class="hero__mark" viewBox="0 0 120 120" aria-hidden="true">
+          <circle class="draw" cx="60" cy="60" r="56" fill="none" stroke="#C9A45C" stroke-width="1.5"/>
+          <circle class="draw" cx="60" cy="60" r="49" fill="none" stroke="#C9A45C" stroke-width=".75"/>
+          <path class="draw" d="M30 88 L62 56 L70 60 L40 92 Z" fill="none" stroke="#F4F1EA" stroke-width="1.2"/>
+          <path class="draw" d="M62 56 L88 30 Q93 27 92 33 L70 60 Z" fill="none" stroke="#C9A45C" stroke-width="1.2"/>
+        </svg>
+        <h1 class="hero__title" aria-label="BarberShopLM">
+          <span class="line"><span class="word" data-split>Barber</span></span>
+          <span class="line"><span class="word" data-split>Shop<em>LM</em></span></span>
+        </h1>
+        <p class="hero__lede">Corte a tijera, barba perfilada y afeitado con toalla caliente. Sin prisas, en el sillón de siempre.</p>
+        <div class="hero__cta">
+          <a href="#reservar" class="btn btn--gold magnetic">Reservar cita</a>
+          <a href="#servicios" class="btn btn--ghost magnetic">Ver servicios</a>
+        </div>
+      </div>
+      <div class="hero__scroll" aria-hidden="true"><span></span>Desliza</div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Corte clásico</span><span>✦</span><span>Fade</span><span>✦</span><span>Barba</span><span>✦</span><span>Navaja</span><span>✦</span><span>Toalla caliente</span><span>✦</span>
+        <span>Corte clásico</span><span>✦</span><span>Fade</span><span>✦</span><span>Barba</span><span>✦</span><span>Navaja</span><span>✦</span><span>Toalla caliente</span><span>✦</span>
+      </div>
+    </div>
+
+    <!-- 2. SERVICIOS -->
+    <section class="section services" id="servicios" aria-labelledby="servicios-t">
+      <header class="section__head">
+        <h2 id="servicios-t" class="reveal-title">Lo que hacemos en el sillón</h2>
+        <p class="section__intro reveal">Cuatro oficios, un mismo cuidado. Cada servicio incluye lavado y acabado con producto.</p>
+      </header>
+      <div class="services__grid">
+        <article class="card tilt">
+          <svg class="card__icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="14" cy="36" r="6"/><circle cx="34" cy="36" r="6"/><path d="M18 32 L36 6 M30 32 L12 6"/></svg>
+          <h3>Cortes</h3>
+          <p>Clásico a tijera, fade a máquina o texturizado. Te asesoramos según tu tipo de pelo y rostro.</p>
+          <span class="card__meta">Desde Q.60 · 40 min</span>
+        </article>
+        <article class="card tilt">
+          <svg class="card__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 14 H40 V20 H8 Z"/><path d="M12 20 V32 M18 20 V36 M24 20 V32 M30 20 V36 M36 20 V32"/></svg>
+          <h3>Barba</h3>
+          <p>Perfilado con navaja, rebaje a máquina y aceite hidratante para que la barba quede limpia y suave.</p>
+          <span class="card__meta">Desde Q.40 · 25 min</span>
+        </article>
+        <article class="card tilt">
+          <svg class="card__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 40 L26 20 L31 23 L12 43 Z"/><path d="M26 20 L40 6 Q43 5 42 9 L31 23 Z"/></svg>
+          <h3>Afeitado clásico</h3>
+          <p>Toalla caliente, espuma a brocha y navaja. El ritual completo, con bálsamo frío al terminar.</p>
+          <span class="card__meta">Desde Q.60 · 35 min</span>
+        </article>
+        <article class="card tilt">
+          <svg class="card__icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M18 6 H30 V12 H18 Z"/><path d="M14 12 H34 L32 42 H16 Z"/><path d="M19 24 H29"/></svg>
+          <h3>Tratamientos</h3>
+          <p>Limpieza facial, mascarilla de carbón y tratamiento capilar anticaída con masaje.</p>
+          <span class="card__meta">Desde Q.75 · 30 min</span>
+        </article>
+      </div>
+    </section>
+
+    <!-- 3. GALERÍA -->
+    <section class="section gallery" id="galeria" aria-labelledby="galeria-t">
+      <header class="section__head">
+        <h2 id="galeria-t" class="reveal-title">Trabajos recientes</h2>
+        <p class="section__intro reveal">Algunos cortes y afeitados de las últimas semanas.</p>
+      </header>
+      <!-- IMÁGENES: fotos generadas con IA; reemplázalas por fotos reales del local cuando las tengas -->
+      <div class="gallery__grid">
+        <figure class="shot shot--tall"><div class="shot__inner"><img src="assets/img/galeria-1.webp" alt="Fade alto con raya marcada" loading="lazy" width="864" height="1152"></div><figcaption>Fade alto</figcaption></figure>
+        <figure class="shot"><div class="shot__inner"><img src="assets/img/galeria-2.webp" alt="Afeitado clásico a navaja" loading="lazy" width="600" height="600"></div><figcaption>Afeitado a navaja</figcaption></figure>
+        <figure class="shot shot--tall"><div class="shot__inner"><img src="assets/img/galeria-3.webp" alt="Corte a tijera texturizado" loading="lazy" width="864" height="1152"></div><figcaption>Corte a tijera</figcaption></figure>
+        <figure class="shot"><div class="shot__inner"><img src="assets/img/galeria-4.webp" alt="Peinado clásico hacia atrás" loading="lazy" width="600" height="600"></div><figcaption>Peinado clásico</figcaption></figure>
+        <figure class="shot shot--tall"><div class="shot__inner"><img src="assets/img/galeria-5.webp" alt="Interior de la barbería" loading="lazy" width="600" height="800"></div><figcaption>El local</figcaption></figure>
+        <figure class="shot"><div class="shot__inner"><img src="assets/img/galeria-6.webp" alt="Poste de barbero en la entrada" loading="lazy" width="600" height="600"></div><figcaption>La entrada</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 4. EQUIPO -->
+    <section class="section team" id="equipo" aria-labelledby="equipo-t">
+      <header class="section__head">
+        <h2 id="equipo-t" class="reveal-title">Quién te atiende</h2>
+        <p class="section__intro reveal">Cuatro barberos, cada uno con su especialidad. Puedes elegir con quién al reservar.</p>
+      </header>
+      <!-- IMÁGENES: fotos generadas con IA; reemplázalas por fotos reales del equipo -->
+      <div class="team__grid">
+        <article class="barber">
+          <div class="barber__photo"><img src="assets/img/barbero-1.webp" alt="Retrato de Leo" loading="lazy" width="600" height="750"></div>
+          <h3>Leo</h3><p>Fundador. Fades y cortes a máquina.</p>
+        </article>
+        <article class="barber">
+          <div class="barber__photo"><img src="assets/img/barbero-2.webp" alt="Retrato de Marta" loading="lazy" width="600" height="750"></div>
+          <h3>Marta</h3><p>Corte a tijera y pelo largo.</p>
+        </article>
+        <article class="barber">
+          <div class="barber__photo"><img src="assets/img/barbero-3.webp" alt="Retrato de Iván" loading="lazy" width="600" height="750"></div>
+          <h3>Iván</h3><p>Afeitado clásico y diseño de barba.</p>
+        </article>
+        <article class="barber">
+          <div class="barber__photo"><img src="assets/img/barbero-4.webp" alt="Retrato de Nora" loading="lazy" width="600" height="750"></div>
+          <h3>Nora</h3><p>Tratamientos faciales y capilares.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 5. PRECIOS -->
+    <section class="section prices" id="precios" aria-labelledby="precios-t">
+      <header class="section__head">
+        <h2 id="precios-t" class="reveal-title">Precios</h2>
+        <p class="section__intro reveal">Precios en quetzales, IVA incluido. Se paga en el local, con tarjeta o efectivo.</p>
+      </header>
+      <div class="prices__board">
+        <table class="menu">
+          <caption class="sr-only">Lista de precios de BarberShopLM</caption>
+          <thead><tr><th scope="col">Servicio</th><th scope="col">Duración</th><th scope="col">Precio</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Corte clásico</th><td>40 min</td><td>Q.60</td></tr>
+            <tr><th scope="row">Fade / degradado</th><td>45 min</td><td>Q.70</td></tr>
+            <tr><th scope="row">Corte infantil (hasta 12 años)</th><td>30 min</td><td>Q.45</td></tr>
+            <tr><th scope="row">Arreglo de barba</th><td>25 min</td><td>Q.40</td></tr>
+            <tr><th scope="row">Afeitado clásico a navaja</th><td>35 min</td><td>Q.60</td></tr>
+            <tr><th scope="row">Corte + barba</th><td>60 min</td><td>Q.90</td></tr>
+            <tr><th scope="row">Limpieza facial</th><td>30 min</td><td>Q.75</td></tr>
+            <tr><th scope="row">Tratamiento capilar</th><td>30 min</td><td>Q.100</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 6. RESERVAS -->
+    <section class="section booking" id="reservar" aria-labelledby="reservar-t">
+      <div class="booking__intro">
+        <h2 id="reservar-t" class="reveal-title">Reserva tu cita</h2>
+        <p class="reveal">Rellena el formulario y te enviamos la reserva por WhatsApp para confirmarla. Si lo prefieres, escríbenos directamente.</p>
+        <!-- WHATSAPP: cambia 50200000000 por tu número real (código de país sin "+") aquí y en js/main.js (WHATSAPP_NUMBER) -->
+        <a class="btn btn--wa magnetic reveal" href="https://wa.me/50200000000?text=Hola%2C%20quiero%20reservar%20una%20cita%20en%20BarberShopLM" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.2 2.2 2.2 0 0 0 .1-1.3c0-.1-.2-.2-.4-.3z"/></svg>
+          Escribir por WhatsApp
+        </a>
+      </div>
+      <form class="form" id="booking-form" novalidate>
+        <div class="field">
+          <label for="f-name">Nombre</label>
+          <input id="f-name" name="name" type="text" autocomplete="name" required minlength="2" aria-describedby="e-name">
+          <p class="field__error" id="e-name" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="f-phone">Teléfono</label>
+          <input id="f-phone" name="phone" type="tel" autocomplete="tel" required inputmode="tel" aria-describedby="e-phone">
+          <p class="field__error" id="e-phone" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="f-service">Servicio</label>
+          <select id="f-service" name="service" required aria-describedby="e-service">
+            <option value="">Elige un servicio</option>
+            <option>Corte clásico</option><option>Fade / degradado</option><option>Corte infantil</option>
+            <option>Arreglo de barba</option><option>Afeitado clásico a navaja</option><option>Corte + barba</option>
+            <option>Limpieza facial</option><option>Tratamiento capilar</option>
+          </select>
+          <p class="field__error" id="e-service" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="f-barber">Barbero</label>
+          <select id="f-barber" name="barber">
+            <option>Sin preferencia</option><option>Leo</option><option>Marta</option><option>Iván</option><option>Nora</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-date">Fecha</label>
+          <input id="f-date" name="date" type="date" required aria-describedby="e-date">
+          <p class="field__error" id="e-date" aria-live="polite"></p>
+        </div>
+        <div class="field">
+          <label for="f-time">Hora</label>
+          <select id="f-time" name="time" required aria-describedby="e-time">
+            <option value="">Elige una hora</option>
+          </select>
+          <p class="field__error" id="e-time" aria-live="polite"></p>
+        </div>
+        <div class="field field--full">
+          <label for="f-notes">Comentarios <span class="opt">(opcional)</span></label>
+          <textarea id="f-notes" name="notes" rows="3" maxlength="300"></textarea>
+        </div>
+        <button type="submit" class="btn btn--gold btn--block magnetic">Enviar reserva por WhatsApp</button>
+        <p class="form__status" id="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <!-- 7. UBICACIÓN Y HORARIOS -->
+    <section class="section visit" id="visitanos" aria-labelledby="visitanos-t">
+      <header class="section__head">
+        <h2 id="visitanos-t" class="reveal-title">Visítanos</h2>
+      </header>
+      <div class="visit__grid">
+        <div class="visit__map reveal">
+          <!-- MAPA: placeholder ilustrado. Puedes sustituirlo por un iframe de Google Maps con tu dirección -->
+          <svg viewBox="0 0 400 300" role="img" aria-label="Mapa ilustrativo de la ubicación">
+            <rect width="400" height="300" fill="#15120E"/>
+            <g stroke="#2b261e" stroke-width="14" fill="none">
+              <path d="M-10 90 H410"/><path d="M-10 210 H410"/><path d="M120 -10 V310"/><path d="M290 -10 V310"/><path d="M-10 300 L410 20"/>
+            </g>
+            <g stroke="#3a3326" stroke-width="2" fill="none" stroke-dasharray="6 8"><path d="M-10 90 H410"/><path d="M120 -10 V310"/></g>
+            <circle class="map-pulse" cx="205" cy="150" r="22" fill="#C9A45C" opacity=".25"/>
+            <path d="M205 120 a20 20 0 0 1 20 20 c0 16 -20 34 -20 34 s-20 -18 -20 -34 a20 20 0 0 1 20 -20z" fill="#C9A45C"/>
+            <circle cx="205" cy="140" r="7" fill="#000"/>
+          </svg>
+        </div>
+        <div class="visit__info">
+          <div class="reveal">
+            <h3>Dirección</h3>
+            <!-- DIRECCIÓN: dato de ejemplo, reemplázalo -->
+            <address>6a. Avenida 12-34, Zona 1<br>Ciudad de Guatemala</address>
+            <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=6a+Avenida+Zona+1+Ciudad+de+Guatemala" target="_blank" rel="noopener">Abrir en Google Maps</a>
+          </div>
+          <div class="reveal">
+            <h3>Horario</h3>
+            <dl class="hours">
+              <div><dt>Lunes</dt><dd>Cerrado</dd></div>
+              <div><dt>Martes a viernes</dt><dd>10:00 – 20:30</dd></div>
+              <div><dt>Sábado</dt><dd>9:30 – 15:00</dd></div>
+              <div><dt>Domingo</dt><dd>Cerrado</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <a class="footer__brand" href="#inicio">
+        <img src="assets/logo.svg" alt="" width="64" height="64">
+        <span>BarberShopLM</span>
+      </a>
+      <ul class="social" aria-label="Redes sociales">
+        <!-- REDES: cambia los enlaces por tus perfiles reales -->
+        <li><a class="magnetic" href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="fill"/></svg></a></li>
+        <li><a class="magnetic" href="https://tiktok.com/" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 3 2.5 5 5.5 5"/></svg></a></li>
+        <li><a class="magnetic" href="https://facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 21v-8h3l.5-3.5H14V7.5c0-1 .4-1.7 1.8-1.7H18V2.7A24 24 0 0 0 15.3 2.5c-2.7 0-4.3 1.6-4.3 4.5v2.5H8V13h3v8"/></svg></a></li>
+      </ul>
+    </div>
+    <p class="footer__copy">© <span id="year">2026</span> BarberShopLM. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+  <script src="js/main.js"></script>
+  <script type="module" src="js/scene.js"></script>
+</body>
+</html>
