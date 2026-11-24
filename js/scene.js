@@ -1,6 +1,8 @@
 /* BarberShopLM — escena 3D procedural del hero (Three.js) */
-import * as THREE from "three";
-import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
+// Script clásico (no módulo) para que también funcione abriendo index.html con doble clic (file://)
+(async () => {
+const THREE = await import("https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js");
+const { RoomEnvironment } = await import("https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/environments/RoomEnvironment.js");
 
 const canvas = document.getElementById("scene");
 const state = window.BSLM || { heroProgress: 0, reduced: false, mouseX: 0, mouseY: 0 };
@@ -390,3 +392,4 @@ resize();
 if (state.reduced) render();
 updateRunning();
 }
+})().catch(() => { const c = document.getElementById("scene"); if (c) c.remove(); });
